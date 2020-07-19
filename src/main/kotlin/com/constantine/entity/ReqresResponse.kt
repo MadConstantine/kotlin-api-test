@@ -1,9 +1,8 @@
 package com.constantine.entity
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class ListUsersResponse(
+data class ReqresResponse<T>(
         @JsonProperty("page")
         val page: Int,
         @JsonProperty("per_page")
@@ -13,7 +12,7 @@ data class ListUsersResponse(
         @JsonProperty("total_pages")
         val totalPages: Int,
         @JsonProperty("data")
-        val data: List<User>,
+        val data: T,
         @JsonProperty("ad")
         val ad: Map<String, String>
 )

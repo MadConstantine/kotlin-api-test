@@ -30,7 +30,7 @@ allure {
     autoconfigure = true
 }
 
-tasks.named<Test>("test") {
+tasks.test {
     useJUnitPlatform()
     System.getenv()["BASE_URL"]?.let { systemProperty("BASE_URL", it) }
 }

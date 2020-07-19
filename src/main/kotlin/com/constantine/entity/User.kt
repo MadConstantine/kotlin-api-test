@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 data class User(
         @JsonProperty("id")
-        val id: String,
+        val id: Int,
         @JsonProperty("email")
         val email: String,
         @JsonProperty("first_name")
