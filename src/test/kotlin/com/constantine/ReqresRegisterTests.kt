@@ -24,6 +24,8 @@ class ReqresRegisterTests: BaseTest() {
         val response = reqresSteps.registerFailure("sydney@fife")
         assertFalse(response.isSuccessful, "Request wasn't successful")
         assertEquals(400, response.code(), "Code was not '400'")
-        assertEquals("Bad Request", response.message(), "Response's message was unexpected")
+        assertEquals("Bad Request", response.message(), "Wrong response message")
+        assertEquals("{\"error\":\"Missing password\"}", response.errorBody()?.string(),
+                "Wrong response error message")
     }
 }

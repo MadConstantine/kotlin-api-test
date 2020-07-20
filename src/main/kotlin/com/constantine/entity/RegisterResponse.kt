@@ -6,7 +6,5 @@ data class RegisterResponse(
         @JsonProperty("id")
         val id: Int,
         @JsonProperty("token")
-        val token: String,
-        @JsonProperty("error")
-        val error: String?
+        val token: String
 )
